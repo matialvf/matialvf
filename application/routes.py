@@ -14,5 +14,16 @@ def list():
 def add_item():
 	return '<h1>item added succesfully</h1>'
 
+@app.route('/delete-item/<id>', methods=['DELETE'])
+def delete_item(id):
+	pass
+
+
 # CRUD operations 
 # http type of requests and most common return codes
+
+# git common commands
+# git status
+# git add
+# git commit
+
