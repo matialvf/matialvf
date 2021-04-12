@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Add Item</h2>
+
+<form method="POST" action="/add-item">
+  <input class="row" type="datetime" name="time" value="" placeholder="Time">
+  <br>
+  <input class="row" type="text" name="event" value="" placeholder="Event">
+  <br>
+  <input class="row" type="text" name="description" value="" placeholder="Description">
+
+  <br>
+
+  <input class="submit" type="submit">
+</form>
+
+{% endblock %}
