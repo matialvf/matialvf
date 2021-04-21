@@ -1,6 +1,8 @@
-from flask import render_template, flash, redirect
-from application import app
+from flask import render_template, flash, redirect, request
+from application import app, db
 from application.forms import LoginForm
+from application.models import Item
+from datetime import datetime
 
 @app.route('/', methods=['GET'])
 @app.route('/index', methods=['GET'])
@@ -9,7 +11,8 @@ def index():
 
 @app.route('/list', methods=['GET'])
 def list():
-    return render_template('list.html')
+    items = Item.query.all()
+    return render_template('list.html', items=items)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -21,7 +24,14 @@ def login():
 
 @app.route('/add-item', methods=['POST'])
 def add_item():
-	return '<h1>item added succesfully</h1>'
+    # submitted_time = request.form.get('date') + ' ' + request.form.get('time')
+    # dt = datetime.strptime(submitted_time, '%Y-%m-%d H:i:s')
+    dt = datetime.strptime(request.form.get('time'), '%Y-%m-%d')
+    item = Item(time=dt, event=request.form.get("event"), description=request.form.get("description"))
+    db.session.add(item)
+    db.session.commit()
+
+    return redirect('/list')
 
 @app.route('/delete-item/<id>', methods=['DELETE'])
 def delete_item(id):

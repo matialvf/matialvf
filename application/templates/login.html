@@ -9,14 +9,14 @@
 
 		<p>
 			{{ form.username.label }}<br>
-			{{ form.username(size=32) }}
+			{{ form.username(size=32, class_="row") }}
 		</p>
 		<p>
 			{{ form.password.label }}<br>
-			{{ form.password(size=32) }}
+			{{ form.password(size=32, class_="row") }}
 		</p>
 		<p class="coco">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-		<p>{{ form.submit() }}</p>
+		<p>{{ form.submit(class_="submit") }}</p>
 		
 	</form>		
 

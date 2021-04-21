@@ -1,8 +1,10 @@
 body{
-  background-color: #fff8f1;
+ /* background-color: #fff8f1;*/
+ background-color: #f8f8f8;
   text-align: center;   
   margin: 0;
-  color: #D48166;
+  /*color: #D48166;*/
+  color:  #343439;
   font-family: "Roboto";
 }
 
@@ -12,7 +14,8 @@ body{
 
 }*/
 .active{
-color: #D48166;
+/*color: #D48166;*/
+color:  #343439;
 }
 a{
   text-decoration: none;
@@ -34,7 +37,8 @@ nav {
   height: 50px;
   padding-top: 2px;
 /*  background-color: #D48166;*/
-  background-color: #faebd7;
+  /*background-color: #faebd7;*/
+  background-color: #DFCDB5;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   grid-column: 2;
@@ -44,8 +48,9 @@ nav {
   margin-bottom: 10px;
   height: 30px;
   width: 300px;
-  background-color: #faebd7;
-  border-color: #D48166;
+  background-color: #DFCDB5;
+  /*background-color: #faebd7;
+  border-color: #D48166;*/
 }
 
 header nav div ul{
@@ -72,15 +77,19 @@ ul a{
 }*/
 
 .submit {
-  background-color: #D48166;
+  /*background-color: #D48166;*/
+  background-color: #DDBE9F;
   color: white;
   text-decoration: none;
   transition: background-color 0.3s;
+  border-radius: 20px;
+  width: 100px;
 }
 
 .submit:hover{
   background-color: #faebd7;
-  color: #D48166;
+  color:  #343439;
+  /*color: #D48166;*/
 }
 .center{
   width: 50%;
@@ -121,4 +130,15 @@ table.center {
   grid-column: 3;
   justify-content: center;
   padding-top: 8px;
+}
+ img:hover {
+  color: #FFF;
+}
+input::placeholder{
+  color: #FFF;
+}
+
+hr {
+    width:50%;
+    margin:0 auto;
 }

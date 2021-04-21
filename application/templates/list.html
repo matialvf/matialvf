@@ -9,16 +9,13 @@
       <th class="chart">Event</th>
       <th class="chart">Description</th>
     </tr>
+    {% for item in items %}
     <tr class="info">
-      <td>10:00am</td>
-      <td>Ferro Beach Soccer Training</td>
-      <td>Team practice. Preparing for Sunday's game.</td>
+      <td>{{ item.time }}</td>
+      <td>{{ item.event }}</td>
+      <td>{{ item.description }}</td>
     </tr>
-    <tr class="info">
-      <td>12:30pm</td>
-      <td>Lunch date with Fermin</td>
-      <td>Discuss beach soccer tactics and some python.</td>
-    </tr>
+    {% endfor %}
   </table>
 
   {% endblock %}
