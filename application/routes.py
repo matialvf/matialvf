@@ -35,8 +35,7 @@ def login():
 @app.route('/add-item', methods=['POST'])
 def add_item():
     submitted_time = request.form.get('date') + ' ' + request.form.get('time')
-    dt = datetime.strptime(submitted_time, '%Y-%m-%d H:i:s')
-    dt = datetime.strptime(request.form.get('time'), '%Y-%m-%d')
+    dt = datetime.strptime(submitted_time, '%Y-%m-%d %H:%M')
     item = Item(time=dt, event=request.form.get("event"), description=request.form.get("description"))
     db.session.add(item)
     db.session.commit()
