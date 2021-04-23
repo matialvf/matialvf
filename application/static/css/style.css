@@ -16,6 +16,7 @@ body{
 .active{
 /*color: #D48166;*/
 color:  #343439;
+font-size: 13px;
 }
 a{
   text-decoration: none;
@@ -107,13 +108,14 @@ table.center {
 
 .chart{
   font-weight: bolder;
-  color:  #D48166;
+  background-color: #DFCDB5;
+  color:  black;
   padding: 10px;
 }
 
 .info{
   padding:  5px;
-  color:  #D48166;
+  color:  #343439;
   font-size: 15px;
 }
 
@@ -131,14 +133,24 @@ table.center {
   justify-content: center;
   padding-top: 8px;
 }
- img:hover {
+
+img:hover {
   color: #FFF;
+  transform: scale(1.5);  
 }
 input::placeholder{
-  color: #FFF;
+  color: #343439;
 }
 
 hr {
     width:50%;
     margin:0 auto;
+}
+
+label{
+  text-align: center;
+}
+
+dd{
+  margin: 0px 0px 16px;
 }

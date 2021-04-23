@@ -5,6 +5,7 @@
 
   <table class="center">
     <tr>
+      <th class="chart">Date</th>
       <th class="chart">Time</th>
       <th class="chart">Event</th>
       <th class="chart">Description</th>
@@ -12,6 +13,7 @@
     {% for item in items %}
     <tr class="info">
       <td>{{ item.time }}</td>
+      <td>{{ item.date }}</td>
       <td>{{ item.event }}</td>
       <td>{{ item.description }}</td>
     </tr>
