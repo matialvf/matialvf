@@ -17,6 +17,7 @@
 		</p>
 		<p class="coco">{{ form.remember_me() }} {{ form.remember_me.label }}</p>
 		<p>{{ form.submit(class_="submit") }}</p>
+		<p>New User? <a class="new" href="{{ url_for('signup') }}">Click to Register!</a></p>
 		
 	</form>		
 

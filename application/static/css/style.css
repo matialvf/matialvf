@@ -18,12 +18,14 @@ body{
 color:  #343439;
 font-size: 13px;
 }
+
 a{
   text-decoration: none;
   transition: color 0.3s;
   flex: 50%;
 
 }
+
 a:hover {
   color: #FFF;
 }
@@ -153,4 +155,17 @@ label{
 
 dd{
   margin: 0px 0px 16px;
+}
+
+@media (max-width: 767px) {
+
+}
+
+.new{
+  color:  #343439;
+font-size: 13px;
+}
+
+.new:hover{
+  color: #DFCDB5;
 }

@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Matias Alvarez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/static/css/style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -12,9 +13,13 @@
         <nav>
           <ul>
           <a class="active" href="/">Home</a>
-          <a class="active" href="/list">List</a>
-          <a class="active" href="/login">Login</a>
-          <a class="active" href="/signup">SignUp</a>
+          <a class="active" href="/list">List</a>  
+          {% if current_user.is_anonymous %}        
+          <a class="active" href="/login">Login</a> <!-- IF logged in, show log out...else login..--> 
+          <a class="active" href="/signup">SignUp</a> <!-- dont show at all, only on log in page show "sign up option"-->
+          {% else %}
+          <a class="active" href="/logout">Log Out</a> 
+          {% endif %}
          </ul>
          <a href="/" id="logo"><img src="static/images/chihuahua.png" alt="chihuahua" style="width:2em; height:2em;"></a>
         </nav>
