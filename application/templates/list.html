@@ -13,11 +13,11 @@
     </tr>
     {% for item in items %}
     <tr class="info">
-      <td>{{ item.time.strftime('%a %d, %B') }}</td>
-      <td>{{ item.time.strftime('%H:%M') }}</td>
-      <td>{{ item.event }}</td>
-      <td>{{ item.description }}</td>
-      <td><a href="/delete-item/{{ item.id }}">X</a></td>
+      <td class="listing">{{ item.time.strftime('%a %d, %B') }}</td>
+      <td class="listing">{{ item.time.strftime('%H:%M') }}</td>
+      <td class="listing">{{ item.event }}</td>
+      <td class="listing">{{ item.description }}</td>
+      <td class="listing"><a href="/delete-item/{{ item.id }}">X</a></td>
     </tr>
     {% endfor %}
   </table>

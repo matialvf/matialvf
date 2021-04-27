@@ -169,3 +169,7 @@ font-size: 13px;
 .new:hover{
     color: #DFCDB5;
 }
+
+.listing{
+  text-align: center;
+}
