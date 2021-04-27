@@ -9,13 +9,15 @@
       <th class="chart">Time</th>
       <th class="chart">Event</th>
       <th class="chart">Description</th>
+      <th class="chart">Remove</th>
     </tr>
     {% for item in items %}
     <tr class="info">
-      <td>{{ item.time }}</td>
-      <td>{{ item.date }}</td>
+      <td>{{ item.time.strftime('%a %d, %B') }}</td>
+      <td>{{ item.time.strftime('%H:%M') }}</td>
       <td>{{ item.event }}</td>
       <td>{{ item.description }}</td>
+      <td><a href="/delete-item/{{ item.id }}">X</a></td>
     </tr>
     {% endfor %}
   </table>

@@ -65,10 +65,11 @@ def add_item():
         db.session.commit()
     return redirect('/list')
 
-@app.route('/delete-item/<id>', methods=['DELETE'])
-def delete_item(id):
-	pass
-
+@app.route('/delete-item/<item_id>', methods=['GET', 'DELETE']) # UPDATE TO DELETE
+def delete_item(item_id):
+    item = Item.query.filter_by(id=item_id).delete()
+    db.session.commit()
+    return redirect('/list')
 
 
 # CRUD operations 
